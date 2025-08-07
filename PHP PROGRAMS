@@ -31,3 +31,45 @@ output:
 1 1 0.5 0.33 
 2 2 1 0.67 
 3 3 1.5 1 
+
+4. Predict the output of the following snippet:
+<?php
+$animal = “antelope”; $animal_heads = 1; $animal_legs = 4;
+echo“The $animal has $animal_heads head(s).”;
+echo“The $animal has $animal_legs leg(s).”;
+?>php
+
+output:The antelope has 1 head(s).The antelope has 4 leg(s).
+
+5. You are building a website where users can calculate the total cost of their purchases.
+Write a PHP program that takes the price and quantity of three items from the user and
+calculates the subtotal, tax (10% of the subtotal),and the total cost (subtotal + tax).
+Display the results to the user.
+
+<?php
+$price1 = 100;
+$qty1   = 2;
+
+$price2 = 50;
+$qty2   = 3;
+
+$price3 = 20;
+$qty3   = 5;
+
+$subtotal = ($price1 * $qty1) + ($price2 * $qty2) + ($price3 * $qty3);
+$tax = $subtotal * 0.10;
+$total = $subtotal + $tax;
+
+echo "--- Purchase Summary ---\n";
+echo "Subtotal: ₹" . number_format($subtotal, 2) . "\n";
+echo "Tax (10%): ₹" . number_format($tax, 2) . "\n";
+echo "Total Cost: ₹" . number_format($total, 2) . "\n";
+?>
+
+output:
+--- Purchase Summary ---
+Subtotal: ₹450.00
+Tax (10%): ₹45.00
+Total Cost: ₹495.00
+
+
