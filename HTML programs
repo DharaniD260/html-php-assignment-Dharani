@@ -1,1 +1,14 @@
 
+
+1)1. Show the output for the following snippet.
+<? php
+$capital=67;
+print(“Variable capital is $capital”);
+print(“Variable CaPiTaL is $CaPiTaL”);
+?>
+
+output:
+Variable capital is 67 Variable CaPiTal is
+
+
+2)
