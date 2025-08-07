@@ -72,4 +72,127 @@ Subtotal: ₹450.00
 Tax (10%): ₹45.00
 Total Cost: ₹495.00
 
+8. A customer visits a shop to buy a soft drink; he has two options:
+Drink A cost is Rs.25 and the size of the bottle is 11.
+Drink B cost is Rs.23 and its size of the bottle is 9.
+Which drink should he choose to save money? Solve this problem using function deal ()
+
+<?php
+function deal() {
+  $costA = 25;
+  $sizeA = 11;
+
+  $costB = 23;
+  $sizeB = 9;
+
+  $valueA = $costA / $sizeA;
+  $valueB = $costB / $sizeB;
+
+  if ($valueA < $valueB) {
+    echo "Drink A is a better deal.";
+  } else {
+    echo "Drink B is a better deal.";
+  }
+}
+
+deal();
+?>
+
+output:Drink A is a better deal.
+
+
+9. Predict the output of the following snippet:
+$this = “this”; $that = “that”; $the_other = 2.2000000000;
+print(“$this,$not_set,$that+$the_other”);
+
+output:this,,that+2.2
+
+
+10. Develop a program to check student grades based on marks using a loop.
+<?php
+$marks = [85, 72, 60, 48, 30];
+
+for ($i = 0; $i < count($marks); $i++) {
+    $mark = $marks[$i];
+
+    echo "Student " . ($i + 1) . ": Marks = $mark, Grade = ";
+
+    if ($mark >= 80) {
+        echo "A";
+    } elseif ($mark >= 60) {
+        echo "B";
+    } elseif ($mark >= 40) {
+        echo "C";
+    } else {
+        echo "Fail<br>";
+    }
+}
+?>
+
+output:
+Student 1: Marks = 85, Grade = A  
+Student 2: Marks = 72, Grade = B  
+Student 3: Marks = 60, Grade = B  
+Student 4: Marks = 48, Grade = C  
+Student 5: Marks = 30, Grade = Fail
+
+11. Develop a PHP program to show days of the week using switch cases.
+<?php
+$dayNumber = 3; 
+
+switch ($dayNumber) {
+    case 1:
+        echo "Sunday";
+        break;
+    case 2:
+        echo "Monday";
+        break;
+    case 3:
+        echo "Tuesday";
+        break;
+    case 4:
+        echo "Wednesday";
+        break;
+    case 5:
+        echo "Thursday";
+        break;
+    case 6:
+        echo "Friday";
+        break;
+    case 7:
+        echo "Saturday";
+        break;
+    default:
+        echo "Invalid day number!";
+}
+?>
+output: tuesday
+
+12. Write a program to check student grade based on marks:
+Conditions:
+If marks are 75% or more, the grade will be First Class.
+If marks between 60% to 74%, grade will be second class.
+If marks between 40% to 59%, grade will be third class.
+If marks are less than 40%, students will be Fail.
+
+<?php
+$marks = 68; 
+
+echo "Marks: $marks";
+echo "Grade: ";
+
+if ($marks >= 75) {
+    echo "First Class";
+} elseif ($marks >= 60 && $marks < 75) {
+    echo "Second Class";
+} elseif ($marks >= 40 && $marks < 60) {
+    echo "Third Class";
+} else {
+    echo "Fail";
+}
+?>
+
+output: Marks: 68Grade: Second Class
+
+
 
