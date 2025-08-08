@@ -417,7 +417,6 @@ echo $result;
 output:
 Best Thing will come to you soon
 
-26. Construct a php program to create a chess board in PHP using the “For” loop.
 27. Articulate the mathematical operators with suitable examples in PHP.
 
 <?php
