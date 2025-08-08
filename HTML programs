@@ -153,3 +153,34 @@ Have a nice day!!
 
 </body>
 </html>
+
+
+14. Show a form with input fields for a user's name, email, and message. When the form is
+submitted, display a confirmation message on the same page with the user's name and
+email.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+<script>
+function showMessage() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    alert("Thank you, " + name + "!\nYour email is: " + email);
+}
+</script>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+<form onsubmit="showMessage(); return false;">
+    Name: <input type="text" id="name" required><br><br>
+    Email: <input type="email" id="email" required><br><br>
+    Message: <textarea id="message" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
