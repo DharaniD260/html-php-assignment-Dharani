@@ -194,5 +194,90 @@ if ($marks >= 75) {
 
 output: Marks: 68Grade: Second Class
 
+15. Create a PHP program to compute the sum of the digits of a number.
+<?php
+$number = 1234; 
+$sum = 0;
+while ($number > 0) {
+    $digit = $number % 10;  
+    $sum += $digit;         
+    $number = (int)($number / 10); 
+}
+echo "Sum of digits is: " . $sum;
+?>
+
+output:Sum of digits is: 10
+
+17.Examine the various control structures in php and construct a bank transaction problem
+with customers deposit and withdrawal of amount.
+<?php
+$balance = 1000; 
+
+$action = "withdraw"; 
+$amount = 500;       
+if ($action == "deposit") {
+    $balance += $amount;
+    echo "Deposited: ₹$amount\n";
+    echo "Current Balance: ₹$balance\n";
+} elseif ($action == "withdraw") {
+    if ($amount > $balance) {
+        echo "Insufficient Balance!\n";
+    } else {
+        $balance -= $amount;
+        echo "Withdrew: ₹$amount\n";
+    }
+    echo "Current Balance: ₹$balance\n";
+} else {
+    echo "Invalid action.\n";
+}
+?>
+
+output:Withdrew: ₹500 Current Balance: ₹500
+
+18. IsSet() function in PHP with example.
+<?php
+$name = "Dharani";
+
+if (isset($name)) {
+    echo "The variable 'name' is set and has a value.";
+} else {
+    echo "The variable 'name' is not set.";
+}
+
+unset($name); // removes the variable
+
+if (isset($name)) {
+    echo "\nThe variable 'name' is set.";
+} else {
+    echo "\nThe variable 'name' is not set.";
+}
+?>
+
+output:
+The variable 'name' is set and has a value.
+The variable 'name' is not set.
+
+19. Examine a PHP function that accepts an array of numbers and returns the highest and
+lowest values in that array. Display the results on the webpage.
+
+<?php
+function findHighLow($numbers) {
+    $highest = max($numbers);
+    $lowest = min($numbers);
+    return array($highest, $lowest);
+}
+
+$numbers = array(10, 25, 3, 99, 56);
+
+list($high, $low) = findHighLow($numbers);
+
+echo "Numbers: " . implode(", ", $numbers) . "";
+echo "Highest Value: $high ";
+echo "Lowest Value: $low";
+?>
+
+output:
+Numbers: 10, 25, 3, 99, 56Highest Value: 99 Lowest Value: 3
+
 
 
