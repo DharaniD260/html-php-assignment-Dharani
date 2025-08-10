@@ -101,7 +101,6 @@ code : <!DOCTYPE html>
       <p>The second project is about learning the various use cases of Devops.</p>
     </section>
 
-    <!-- Add more projects if needed -->
   </main>
 
   <footer>
@@ -147,7 +146,7 @@ Have a nice day!!
         message.innerHTML = `Hello ${name}, Welcome to Everyone!<br>Have a nice day!!`;
       }
 
-      return false; // Prevent form from submitting
+      return false; 
     }
   </script>
 
