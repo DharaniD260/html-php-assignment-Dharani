@@ -216,7 +216,6 @@ function addNumbers($a, $b) {
     return $a + $b;
 }
 
-// Simulated input
 $num1 = 5;
 $num2 = 10;
 
@@ -433,6 +432,14 @@ echo "Exponentiation (**): " . ($a ** $b) . "\n";
 ?>
 
 output:
+
+a = 12, b = 5
+Addition (+): 17
+Subtraction (-): 7
+Multiplication (*): 60
+Division (/): 2.4
+Modulus (%): 2
+Exponentiation (**): 248832
 
 28. Consider three variables $a, $b, $c, apply var_dump() function to evaluate if the values
 are equal or not.
