@@ -262,7 +262,7 @@ if (isset($name)) {
     echo "The variable 'name' is not set.";
 }
 
-unset($name); // removes the variable
+unset($name); 
 
 if (isset($name)) {
     echo "\nThe variable 'name' is set.";
