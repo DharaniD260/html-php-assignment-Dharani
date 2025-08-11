@@ -485,3 +485,19 @@ Random Password: ^lwN@#ve
 
 
 
+
+
+
+
+
+
+<?php
+$fruits = ["Apple", "Banana", "Cherry", "Mango"];
+
+array_shift($fruits); // Removes "Apple"
+
+print_r($fruits);
+?>
+
+
+
