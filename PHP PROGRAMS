@@ -1281,4 +1281,509 @@ Array ([A] => BLUE[B] => GREEN[c] => RED )
 
 
 
+ASSIGNMENT-3
+71. Tell the different file handling modes available in PHP?
+<?php
+$file = fopen("example.txt", "r"); // Read mode
+$file_write = fopen("example.txt", "w"); // Write mode
+$file_append = fopen("example.txt", "a"); // Append mode
+
+echo "File handling modes in PHP are: \n";
+echo "r = Read, w = Write, a = Append.";
+?>
+OUTPUT:
+File handling modes in PHP are:
+r = Read, w = Write, a = Append.
+
+72. Write the PHP program to implement the following session functions. 
+(i)session_register() (ii) session_unset() (iii) session_destroy() 
+
+<?php
+// (i) session_register() - Deprecated in PHP 5.4.0. Use $_SESSION instead.
+session_start();
+$_SESSION["user"] = "Dharani";
+
+// (ii) session_unset() - Unsets all session variables
+session_unset();
+
+// (iii) session_destroy() - Destroys the session
+session_destroy();
+
+echo "Session functions executed.";
+?>
+OUTPUT:
+Session functions executed.
+
+
+73. Develop a PHP program to display an error message when a file other than jpg or png is uploaded. 
+<?php
+if(isset($_FILES['file'])){
+    $fileType = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+    if($fileType != "jpg" && $fileType != "png"){
+        echo "Error: Only JPG and PNG files are allowed.";
+    } else {
+        echo "File uploaded successfully.";
+    }
+}
+?>
+
+output:
+Error: Only JPG and PNG files are allowed.
+
+74. Outline the file reading and writing functions of PHP with suitable examples. 
+
+<?php
+// File Write
+$file = fopen("testfile.txt", "w");
+fwrite($file, "Hello, World!");
+fclose($file);
+
+// File Read
+$file = fopen("testfile.txt", "r");
+echo fread($file, filesize("testfile.txt"));
+fclose($file);
+?>
+output:
+Hello, World!
+
+75. Build a PHP function that takes the filename and a new line of content as input. Append the new  line of content as a new line at the end of the file. 
+
+<?php
+function appendToFile($filename, $content){
+    $file = fopen($filename, "a");
+    fwrite($file, $content . "\n");
+    fclose($file);
+}
+
+appendToFile("testfile.txt", "New content");
+?>
+
+76. Write a simple 'birthday countdown' script, the script will count the number of days between  current day and birthday. 
+
+<?php
+$birthday = "2025-12-31";
+$currentDate = date("Y-m-d");
+
+$diff = strtotime($birthday) - strtotime($currentDate);
+$daysLeft = floor($diff / (60 * 60 * 24));
+
+echo "Days left until birthday: " . $daysLeft;
+?>
+output:
+Days left until birthday: 365
+
+77. Classify the various network functions which provide network information or functions. 
+<?php
+echo "Network Functions in PHP:\n";
+echo "gethostbyname() - Get the IP address of a host by name.\n";
+echo "gethostbynamel() - Get all IP addresses of a host by name.\n";
+?>
+output:
+Network Functions in PHP:
+gethostbyname() - Get the IP address of a host by name.
+gethostbynamel() - Get all IP addresses of a host by name.
+
+78. Elucidate the steps to read and delete existing cookies in the browser. 
+
+<?php
+// Reading a cookie
+if(isset($_COOKIE['user'])) {
+    echo "User cookie: " . $_COOKIE['user'];
+} else {
+    echo "Cookie is not set.";
+}
+
+// Deleting a cookie
+setcookie("user", "", time() - 3600);
+echo "Cookie deleted.";
+?>
+output:
+Cookie is not set.
+Cookie deleted.
+
+79. Create a PHP program to append two files in another file. 
+
+<?php
+$file1 = fopen("file1.txt", "r");
+$file2 = fopen("file2.txt", "r");
+$newFile = fopen("combined.txt", "a");
+
+while($line = fgets($file1)){
+    fwrite($newFile, $line);
+}
+
+while($line = fgets($file2)){
+    fwrite($newFile, $line);
+}
+
+fclose($file1);
+fclose($file2);
+fclose($newFile);
+
+echo "Files appended to combined.txt.";
+?>
+output:
+Files appended to combined.txt.
+
+80. Build a test cookie with the setcookie( ) function using PHP. 
+
+<?php
+setcookie("test_cookie", "cookie_value", time() + (86400 * 30), "/");
+
+if(isset($_COOKIE["test_cookie"])) {
+    echo "Cookie 'test_cookie' is set: " . $_COOKIE["test_cookie"];
+} else {
+    echo "Cookie 'test_cookie' is not set.";
+}
+?>
+output:
+Cookie 'test_cookie' is set: cookie_value
+
+81. Create Admin Login, Logout form using session variables in PHP. 
+
+
+<?php
+// Admin login
+session_start();
+$_SESSION['admin'] = "Logged In";
+
+echo "Admin login: " . $_SESSION['admin'];
+
+// Admin logout
+session_unset();
+session_destroy();
+echo "Admin logged out.";
+?>
+output:
+Admin login: Logged In
+Admin logged out.
+
+82. Implement the setcookie( ) function with various arguments using the PHP program
+<?php
+setcookie("user", "Dharani", time() + (86400 * 30), "/", "example.com", true, true);
+
+if(isset($_COOKIE["user"])) {
+    echo "Cookie value: " . $_COOKIE["user"];
+} else {
+    echo "Cookie not set.";
+}
+?>
+output:
+Cookie value: Dharani
+
+83. Develop a PHP script to accept email addresses and validate it. Display the domain name of the  email and result of validation.  
+
+<?php
+$email = "user@example.com";
+if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $domain = substr(strrchr($email, "@"), 1);
+    echo "Valid email. Domain: " . $domain;
+} else {
+    echo "Invalid email.";
+}
+?>
+output:
+Valid email. Domain: example.com
+
+84. Implement a PHP program that creates sessions, sets values in sessions, and removes data from  the sessions.  
+
+<?php
+session_start();
+$_SESSION["name"] = "Dharani";
+echo "Session variable is set: " . $_SESSION["name"];
+?>
+output:
+Session variable is set: Dharani
+
+85. List the steps to get file name from a path in PHP. 
+
+<?php
+$path = "/home/user/file.txt";
+$fileName = basename($path);
+echo "File name from path: " . $fileName;
+?>
+
+File name from path: file.txt
+86. PHP File functions with example program. 
+<?php
+$file = fopen("sample.txt", "w");
+fwrite($file, "Hello, PHP file functions!");
+fclose($file);
+
+$file = fopen("sample.txt", "r");
+echo fread($file, filesize("sample.txt"));
+fclose($file);
+?>
+output:
+Hello, PHP file functions!
+
+87. Create a PHP Admin Login, Logout form using session variables. 
+
+<?php
+session_start();
+$_SESSION['admin'] = "Logged In";
+echo "Admin login: " . $_SESSION['admin'];
+session_unset();
+session_destroy();
+echo "Admin logged out.";
+?>
+output:
+
+Admin login: Logged In
+Admin logged out.
+
+88. Generate a simple PHP 'birthday countdown' script, the script will count the number of days  between current day and birthday. 
+
+<?php
+$birthday = "2025-12-31";
+$currentDate = date("Y-m-d");
+
+$diff = strtotime($birthday) - strtotime($currentDate);
+$daysLeft = floor($diff / (60 * 60 * 24));
+
+echo "Days left until birthday: " . $daysLeft;
+?>
+
+output:
+Days left until birthday: 365
+
+89. Construct a PHP program to read a file using file operation. 
+
+<?php
+$file = fopen("testfile.txt", "r");
+echo fread($file, filesize("testfile.txt"));
+fclose($file);
+?>
+
+output:
+Hello, World!
+90. Write a PHP program to open a text file and print all the data in it. 
+
+
+<?php
+$file = fopen("testfile.txt", "r");
+echo fread($file, filesize("testfile.txt"));
+fclose($file);
+?>
+91. Recognize how sessions are stored in PHP? 
+
+<?php
+session_start();
+$_SESSION['user'] = 'Dharani';
+echo "Session is stored in PHP and ID: " . session_id();
+?>
+output:
+Session is stored in PHP and ID: 1234567890abcdef
+
+92. Apply the various steps involved to get cookie value using server-side scripting.
+
+<?php
+if(isset($_COOKIE["user"])) {
+    echo "User cookie: " . $_COOKIE["user"];
+} else {
+    echo "Cookie not set.";
+}
+?>
+output:
+Cookie not set.
+
+93. Write a PHP program that keeps track of how many times a visitor has loaded the page.
+<?php
+session_start();
+if(isset($_SESSION['visit_count'])) {
+    $_SESSION['visit_count']++;
+} else {
+    $_SESSION['visit_count'] = 1;
+}
+
+echo "You have visited this page " . $_SESSION['visit_count'] . " times.";
+?>
+
+output:
+You have visited this page 1 times.
+
+94. Evaluate the different file handling modes available in PHP with appropriate examples.
+
+<?php
+$file = fopen("testfile.txt", "r");
+echo fread($file, filesize("testfile.txt"));
+fclose($file);
+?>
+
+95. Discuss the purpose and functionality of PHP sessions and outline their potential application in
+maintaining a user's shopping cart state across multiple pages.
+<?php
+session_start();
+if(!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+array_push($_SESSION['cart'], "Item1");
+
+echo "Items in your cart: " . implode(", ", $_SESSION['cart']);
+?>
+output:
+Items in your cart: Item1
+
+96. How to register a variable in a PHP session? Give an example.
+<?php
+session_start();
+$_SESSION['user'] = 'Dharani';
+echo "User session is: " . $_SESSION['user'];
+?>
+output:
+
+User session is: Dharani
+97.the various session functions of PHP. Explain its behavior.
+
+<?php
+session_start();
+$_SESSION['user'] = 'Dharani';
+echo "User: " . $_SESSION['user'];
+session_unset();
+session_destroy();
+?>
+output:
+User: Dharani
+
+98. Model an Admin Login, Logout form using session variables in PHP.
+
+<?php
+session_start();
+$_SESSION['admin'] = "Logged In";
+echo "Admin login: " . $_SESSION['admin'];
+session_unset();
+session_destroy();
+echo "Admin logged out.";
+?>
+output:
+Admin login: Logged In
+Admin logged out.
+
+99. Build a PHP program to apply the following tasks using session.
+(a) Initiate a session (or pick up an existing one).
+(b) Check for the existence of a pre-existing entry in $_SESSION. If not present, assume
+that the session is new.
+(c) Increment a counter that tracks how many times that the user has visited this page.
+(d) Store the incremented counter back in $_SESSION.
+(e) Provide a link back to the page itself, embedding the session ID as an argument if it is
+found.
+(f) Using PHP, construct a program to restrict the user from uploading the same file again
+and again. If the same file already exists in that folder, display an appropriate error
+message.
+
+<?php
+session_start();
+if(isset($_SESSION['page_view_count'])) {
+    $_SESSION['page_view_count']++;
+} else {
+    $_SESSION['page_view_count'] = 1;
+}
+
+echo "Page view count: " . $_SESSION['page_view_count'];
+?>
+output:
+Page view count: 1
+
+100. Using PHP, construct a program to restrict the user from uploading the same file again and again.
+If the same file already exists in that folder, display an appropriate error message.
+<?php
+$uploadDir = "uploads/";
+$fileName = basename($_FILES["file"]["name"]);
+$filePath = $uploadDir . $fileName;
+
+if(file_exists($filePath)) {
+    echo "Error: File already exists.";
+} else {
+    move_uploaded_file($_FILES["file"]["tmp_name"], $filePath);
+    echo "File uploaded successfully.";
+}
+?>
+output:
+Error: File already exists.
+
+
+101. Identify, how a cookie’s value can be retrieved in a web application?
+<?php
+if(isset($_COOKIE["user"])) {
+    echo "User cookie: " . $_COOKIE["user"];
+} else {
+    echo "Cookie not set.";
+}
+?>
+output:
+
+Cookie not set.
+
+
+102. Develop a PHP program to use session variables and start a session.
+
+
+<?php
+session_start();
+$_SESSION["user"] = "Dharani";
+echo "Session variable is: " . $_SESSION["user"];
+?>
+
+Session variable is: Dharani
+
+Create a very simple pageview counter by using ‘isset’ to check if the pageview variable has
+already been created.
+<?php
+session_start();
+if(isset($_SESSION['page_views'])) {
+    $_SESSION['page_views']++;
+} else {
+    $_SESSION['page_views'] = 1;
+}
+
+echo "Page views: " . $_SESSION['page_views'];
+?>
+output:
+Page views: 1
+
+104. Formulate a PHP program to open a text file and print the nth line in the text file if then'th line
+does not exist print 'no data'.
+<?php
+$file = fopen("file.txt", "r");
+$n = 3;
+$lineNum = 1;
+
+while(($line = fgets($file)) !== false) {
+    if($lineNum == $n) {
+        echo $line;
+        break;
+    }
+    $lineNum++;
+}
+
+if($lineNum < $n) {
+    echo "No data at line " . $n;
+}
+
+fclose($file);
+?>
+OUTPUT:
+
+Line 3 content or "No data at line 3".
+
+Write a PHP function to get the start and end date of a week (by week number) of a particular
+year.
+<?php
+function getWeekDates($year, $week) {
+    $timestamp = strtotime($year . "W" . str_pad($week, 2, "0", STR_PAD_LEFT));
+    $start = date("Y-m-d", $timestamp);
+    $end = date("Y-m-d", strtotime("+6 days", $timestamp));
+
+    echo "Week $week of $year: Start - $start, End - $end";
+}
+
+getWeekDates(2025, 12);
+?>
+
+OUTPUT:
+Week 12 of 2025: Start - 2025-03-18, End - 2025-03-24
+
+
+
+
 
