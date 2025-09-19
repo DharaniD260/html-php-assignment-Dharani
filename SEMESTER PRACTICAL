@@ -1,5 +1,180 @@
 SEMESTER PRACTICAL PROGRAMS
 
+SEMESTER PRACTICAL PROGRAM 
+
+Program 1
+Main.html
+<html>
+<head>
+<title>Dharani's Portfolio</title>
+<frameset rows="20%,80%">
+<frame src="header.html" name="header">
+<frameset cols="25%,75%">
+<frame src="menu.html" name="menu">
+<frame src="welcome.html" name="content">
+</frameset>
+</frameset>
+</head>
+</html>
+Header.html
+<html>
+<body bgcolor="pink">
+<h1><center>welcome to my personal portfolio</center></h1>
+</body>
+</html>
+Menu.html
+<html>
+<body bgcolor="lightblue">
+<h1>MENU</h1>
+<a href="skills.html" target="content">Skills</a><br>
+<a href="projects.html" target="content">Projects</a><br>
+<a href="contact.html" target="content">Contact</a><br>
+</body>
+</html>
+Projects.html
+<html>
+<body>
+<h2>MY projects</h2>
+<ul>
+<li>ticket booking website</li>
+<li>blog </li>
+<li>Registration form</li>
+</ul>
+</body>
+</html>
+Skills.html
+<html>
+<body>
+<h2>MY SKILLS</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</body>
+</html>
+Contacts.html
+<html>
+<body>
+<h2>Contacts</h2>
+Email:dharanid260@gmail.com
+number:9342115621
+</body>
+</html>
+Welcome.html
+<html>
+<body>
+<p>welcome to my personal portfolio website <br>
+</body>
+</html>
+Program 2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: lightyellow;
+        }
+        header {
+            background-color: darkred;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px gray;
+        }
+        h2 {
+            color: darkred;
+        }
+        ul {
+            list-style-type: square;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: navy;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Welcome to Hotel SBD </h1>
+        <p>Delicious Food, Great Ambience</p>
+    </header>
+
+    <nav>
+        <a href="#starters">Starters</a>
+        <a href="#maincourse">Main Course</a>
+        <a href="#desserts">Desserts</a>
+        <a href="#drinks">Drinks</a>
+    </nav>
+
+    <section id="starters">
+        <h2>Starters</h2>
+        <ul>
+            <li>Veg Soup - ₹80</li>
+            <li>Paneer Tikka - ₹120</li>
+            <li>Chicken 65 - ₹150</li>
+        </ul>
+    </section>
+
+    <section id="maincourse">
+        <h2>Main Course</h2>
+        <ul>
+            <li>Veg Biryani - ₹180</li>
+            <li>Butter Naan with Paneer Butter Masala - ₹200</li>
+            <li>Chicken Biryani - ₹220</li>
+        </ul>
+    </section>
+
+    <section id="desserts">
+        <h2>Desserts</h2>
+        <ul>
+            <li>Gulab Jamun - ₹60</li>
+            <li>Ice Cream (2 Scoops) - ₹90</li>
+            <li>Chocolate Brownie - ₹120</li>
+        </ul>
+    </section>
+
+    <section id="drinks">
+        <h2>Drinks</h2>
+        <ul>
+            <li>Fresh Lime Soda - ₹70</li>
+            <li>Cold Coffee - ₹100</li>
+            <li>Mojito - ₹130</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 Hotel SBD|ThankYou For Visting!
+    </footer>
+
+</body>
+</html>
+
 PROGRAM 3 control structures and loops
 
 <!DOCTYPE html>
