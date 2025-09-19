@@ -1,1 +1,107 @@
+Program 2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: lightyellow;
+        }
+        header {
+            background-color: darkred;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: navy;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px gray;
+        }
+        h2 {
+            color: darkred;
+        }
+        ul {
+            list-style-type: square;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: navy;
+            color: white;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1> Welcome to Hotel SBD </h1>
+        <p>Delicious Food, Great Ambience</p>
+    </header>
+
+    <nav>
+        <a href="#starters">Starters</a>
+        <a href="#maincourse">Main Course</a>
+        <a href="#desserts">Desserts</a>
+        <a href="#drinks">Drinks</a>
+    </nav>
+
+    <section id="starters">
+        <h2>Starters</h2>
+        <ul>
+            <li>Veg Soup - ₹80</li>
+            <li>Paneer Tikka - ₹120</li>
+            <li>Chicken 65 - ₹150</li>
+        </ul>
+    </section>
+
+    <section id="maincourse">
+        <h2>Main Course</h2>
+        <ul>
+            <li>Veg Biryani - ₹180</li>
+            <li>Butter Naan with Paneer Butter Masala - ₹200</li>
+            <li>Chicken Biryani - ₹220</li>
+        </ul>
+    </section>
+
+    <section id="desserts">
+        <h2>Desserts</h2>
+        <ul>
+            <li>Gulab Jamun - ₹60</li>
+            <li>Ice Cream (2 Scoops) - ₹90</li>
+            <li>Chocolate Brownie - ₹120</li>
+        </ul>
+    </section>
+
+    <section id="drinks">
+        <h2>Drinks</h2>
+        <ul>
+            <li>Fresh Lime Soda - ₹70</li>
+            <li>Cold Coffee - ₹100</li>
+            <li>Mojito - ₹130</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 Hotel SBD|ThankYou For Visting!
+    </footer>
+
+</body>
+</html>
