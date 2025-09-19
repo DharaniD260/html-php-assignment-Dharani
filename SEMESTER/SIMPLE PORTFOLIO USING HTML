@@ -1,1 +1,66 @@
+Program 1
+Main.html
+<html>
+<head>
+<title>Dharani's Portfolio</title>
+<frameset rows="20%,80%">
+<frame src="header.html" name="header">
+<frameset cols="25%,75%">
+<frame src="menu.html" name="menu">
+<frame src="welcome.html" name="content">
+</frameset>
+</frameset>
+</head>
+</html>
+Header.html
+<html>
+<body bgcolor="pink">
+<h1><center>welcome to my personal portfolio</center></h1>
+</body>
+</html>
+Menu.html
+<html>
+<body bgcolor="lightblue">
+<h1>MENU</h1>
+<a href="skills.html" target="content">Skills</a><br>
+<a href="projects.html" target="content">Projects</a><br>
+<a href="contact.html" target="content">Contact</a><br>
+</body>
+</html>
+Projects.html
+<html>
+<body>
+<h2>MY projects</h2>
+<ul>
+<li>ticket booking website</li>
+<li>blog </li>
+<li>Registration form</li>
+</ul>
+</body>
+</html>
+Skills.html
+<html>
+<body>
+<h2>MY SKILLS</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</body>
+</html>
+Contacts.html
+<html>
+<body>
+<h2>Contacts</h2>
+Email:dharanid260@gmail.com
+number:9342115621
+</body>
+</html>
+Welcome.html
+<html>
+<body>
+<p>welcome to my personal portfolio website <br>
+</body>
+</html>
 
