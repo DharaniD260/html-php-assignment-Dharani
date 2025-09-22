@@ -1,0 +1,14 @@
+15. Create a PHP program to compute the sum of the digits of a number.
+
+
+
+<?php  
+$number = 1234;   
+$sum = 0;  
+while ($number > 0) {  
+    $digit = $number % 10;    
+    $sum += $digit;           
+    $number = (int)($number / 10);   
+}  
+echo "Sum of digits is: " . $sum;  
+?>  output:Sum of digits is: 10
