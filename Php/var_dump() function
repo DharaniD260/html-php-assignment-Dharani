@@ -1,0 +1,24 @@
+28. Consider three variables $a, $b, $c, apply var_dump() function to evaluate if the values
+are equal or not.
+
+
+
+<?php  
+$a = 10;  
+$b = 10;  
+$c = 20;  
+  
+echo "a = $a, b = $b, c = $c";  
+  
+echo "a == b: ";  
+var_dump($a == $b);  
+  
+echo "a == c: ";  
+var_dump($a == $c);  
+  
+echo "b == c: ";  
+var_dump($b == $c);  
+?>  output:
+a = 10, b = 10, c = 20a == b: bool(true)
+a == c: bool(false)
+b == c: bool(false)
