@@ -1,1 +1,111 @@
+3. Imagine you are building a personal portfolio website. Design a web page layout that
+includes a header, a navigation menu, a main content area for displaying your projects
+and a footer. Explain how you would structure the HTML code and apply CSS styles to
+achieve the desired layout and visual design.
 
+code : <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 10px 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .project {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal website!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="project">
+      <h2>Project 1</h2>
+      <p>This project talks about the various tools and environments used for web development and design.</p>
+    </section>
+
+    <section class="project">
+      <h2>Project 2</h2>
+      <p>The second project is about learning the various use cases of Devops.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
