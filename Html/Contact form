@@ -1,0 +1,29 @@
+20. Implement a contact form with validation to ensure all fields are filled out before  
+submission.  <!DOCTYPE html>  <html>  
+<head>  
+    <title>Contact Form</title>  
+    <script>  
+        function validateForm() {  
+            let name = document.forms["contactForm"]["name"].value;  
+            let email = document.forms["contactForm"]["email"].value;  
+            let message = document.forms["contactForm"]["message"].value;  if (name == "" || email == "" || message == "") {  
+            alert("All fields must be filled out");  
+            return false; // stop form from submitting  
+        }  
+        alert("Form submitted successfully!");  
+        return true;  
+    }  
+</script>
+
+</head>  
+<body>  
+    <h2>Contact Form</h2>  
+    <form name="contactForm" onsubmit="return validateForm()">  
+        Name: <input type="text" name="name"><br><br>  
+        Email: <input type="email" name="email"><br><br>  
+        Message:<br>  
+        <textarea name="message"></textarea><br><br>  
+        <button type="submit">Send</button>  
+    </form>  
+</body>  
+</html>
