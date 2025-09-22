@@ -1,0 +1,54 @@
+24. Write a PHP script to manipulate the strings with all the string functions.
+
+
+
+<?php  
+$str = "  Hello World! Welcome to PHP.  ";  
+  
+// Remove extra spaces  
+$trimmed = trim($str);  
+  
+// Convert to lowercase and uppercase  
+$lower = strtolower($trimmed);  
+$upper = strtoupper($trimmed);  
+  
+// String length  
+$length = strlen($trimmed);  
+  
+// Word count  
+$wordCount = str_word_count($trimmed);  
+  
+// Replace a word  
+$replaced = str_replace("World", "Friend", $trimmed);  
+  
+// Reverse the string  
+$reversed = strrev($trimmed);  
+  
+// Find position of a word  
+$pos = strpos($trimmed, "PHP");  
+  
+// Substring  
+$sub = substr($trimmed, 6, 5);  
+  
+// Display results neatly  
+echo "Original: '$str'\n";  
+echo "Trimmed: '$trimmed'\n";  
+echo "Lowercase: $lower\n";  
+echo "Uppercase: $upper\n";  
+echo "Length: $length\n";  
+echo "Word count: $wordCount\n";  
+echo "Replace: $replaced\n";  
+echo "Reversed: $reversed\n";  
+echo "Position of 'PHP': $pos\n";  
+echo "Substring: $sub\n";  
+?>  output:
+Original: '  Hello World! Welcome to PHP.  '
+Trimmed: 'Hello World! Welcome to PHP.'
+Lowercase: hello world! welcome to php.
+Uppercase: HELLO WORLD! WELCOME TO PHP.
+Length: 28
+Word count: 5
+Replace: Hello Friend! Welcome to PHP.
+Reversed: .PHP ot emocleW !dlroW olleH
+Position of 'PHP': 24
+Substring: World
