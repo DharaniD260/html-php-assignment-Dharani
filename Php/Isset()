@@ -1,0 +1,23 @@
+18. IsSet() function in PHP with example.
+
+
+
+<?php  
+$name = "Dharani";  
+  
+if (isset($name)) {  
+    echo "The variable 'name' is set and has a value.";  
+} else {  
+    echo "The variable 'name' is not set.";  
+}  
+  
+unset($name);   
+  
+if (isset($name)) {  
+    echo "\nThe variable 'name' is set.";  
+} else {  
+    echo "\nThe variable 'name' is not set.";  
+}  
+?>  output:
+The variable 'name' is set and has a value.
+The variable 'name' is not set.
